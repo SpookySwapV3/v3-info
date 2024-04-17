@@ -8,6 +8,7 @@ export const MAX_UINT128 = BigNumber.from(2).pow(128).sub(1)
 
 export const MATIC_ADDRESS = '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270'
 export const CELO_ADDRESS = '0x471EcE3750Da237f93B8E339c536989b8978a438'
+export const FANTOM_ADDRESS = '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83'
 
 const WETH_ADDRESS = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
 const ARBITRUM_WETH_ADDRESS = '0x82af49447d8a07e3bd95bd0d56f35241523fbab1'
@@ -28,6 +29,7 @@ export const TOKEN_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.BNB]: [],
   [SupportedNetwork.AVALANCHE]: [],
   [SupportedNetwork.BASE]: [],
+  [SupportedNetwork.FANTOM]: [],
 }
 
 export const POOL_HIDE: { [key: string]: string[] } = {
@@ -47,6 +49,7 @@ export const POOL_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.BNB]: [],
   [SupportedNetwork.AVALANCHE]: [],
   [SupportedNetwork.BASE]: [],
+  [SupportedNetwork.FANTOM]: [],
 }
 
 export const START_BLOCKS: { [key: string]: number } = {
@@ -58,6 +61,7 @@ export const START_BLOCKS: { [key: string]: number } = {
   [SupportedNetwork.BNB]: 26324014,
   [SupportedNetwork.AVALANCHE]: 31422450,
   [SupportedNetwork.BASE]: 1371680,
+  [SupportedNetwork.FANTOM]: 70992836,
 }
 
 export interface WalletInfo {

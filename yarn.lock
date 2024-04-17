@@ -3646,10 +3646,22 @@
   resolved "https://registry.yarnpkg.com/@uniswap/merkle-distributor/-/merkle-distributor-1.0.1.tgz#dc3d911f65a860fc3f0cae074bdcd08ed6a27a4d"
   integrity sha512-5gDiTI5hrXIh5UWTrxKYjw30QQDnpl8ckDSpefldNenDlYO1RKkdUYMYpvrqGi2r7YzLYTlO6+TDlNs6O7hDRw==
 
-"@uniswap/sdk-core@^4", "@uniswap/sdk-core@^4.0.9":
+"@uniswap/sdk-core@^4":
   version "4.0.9"
   resolved "https://registry.yarnpkg.com/@uniswap/sdk-core/-/sdk-core-4.0.9.tgz#7aef87de6d944307ce9bd57d1e1adfdcb2fed3ee"
   integrity sha512-/0K+u3ZWokpj9VyRuGwrwx7jy31auJdsw5UbKnvHqUSfejrp6XhmMPNOElPgL6jiUhAN1NhVHfjX01tNHFxeLA==
+  dependencies:
+    "@ethersproject/address" "^5.0.2"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.4"
+    tiny-invariant "^1.1.0"
+    toformat "^2.0.0"
+
+"@uniswap/sdk-core@npm:@spookyswaptest/sdk-core@^1.0.22":
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/@spookyswaptest/sdk-core/-/sdk-core-1.0.22.tgz#3c4f032b11e198fe6d1b6190e4c3e7d307c168a7"
+  integrity sha512-qCWb/hMYO8NW09QDsI1RbKj6iznhXWGD7OGv3gUWqXUKVlcpJUodpSqwbx2I9WkpnhmX//d1dvRCKBCz6HAqOQ==
   dependencies:
     "@ethersproject/address" "^5.0.2"
     big.js "^5.2.2"
