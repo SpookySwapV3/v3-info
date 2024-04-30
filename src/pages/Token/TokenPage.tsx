@@ -42,7 +42,6 @@ import { useCMCLink } from 'hooks/useCMCLink'
 import CMCLogo from '../../assets/images/cmc.png'
 import { useParams } from 'react-router-dom'
 import { Trace } from '@uniswap/analytics'
-import { ChainId } from '@uniswap/sdk-core'
 
 const PriceText = styled(TYPE.label)`
   font-size: 36px;
@@ -87,6 +86,7 @@ const DEFAULT_TIME_WINDOW = TimeWindow.WEEK
 
 export default function TokenPage() {
   const [activeNetwork] = useActiveNetworkVersion()
+  const chainId = activeNetwork.chainId
   const { address } = useParams<{ address?: string }>()
 
   const formattedAddress = address?.toLowerCase() ?? ''
@@ -190,9 +190,7 @@ export default function TokenPage() {
                     </StyledInternalLink>
                     <TYPE.main>{` > `}</TYPE.main>
                     <TYPE.label>{` ${tokenData.symbol} `}</TYPE.label>
-                    <StyledExternalLink
-                      href={getExplorerLink(ChainId.MAINNET, formattedAddress, ExplorerDataType.ADDRESS)}
-                    >
+                    <StyledExternalLink href={getExplorerLink(chainId, formattedAddress, ExplorerDataType.ADDRESS)}>
                       <TYPE.main>{` (${shortenAddress(formattedAddress)}) `}</TYPE.main>
                     </StyledExternalLink>
                   </AutoRow>
@@ -206,9 +204,7 @@ export default function TokenPage() {
                         <StyledCMCLogo src={CMCLogo} />
                       </StyledExternalLink>
                     )}
-                    <StyledExternalLink
-                      href={getExplorerLink(ChainId.MAINNET, formattedAddress, ExplorerDataType.ADDRESS)}
-                    >
+                    <StyledExternalLink href={getExplorerLink(chainId, formattedAddress, ExplorerDataType.ADDRESS)}>
                       <ExternalLink stroke={theme?.text2} size={'17px'} style={{ marginLeft: '12px' }} />
                     </StyledExternalLink>
                   </RowFixed>

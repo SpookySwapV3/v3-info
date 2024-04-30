@@ -6,7 +6,6 @@ import { useActiveNetworkVersion, useSubgraphStatus } from '../../state/applicat
 import { ExplorerDataType, getExplorerLink } from '../../utils'
 import useTheme from 'hooks/useTheme'
 import { EthereumNetworkInfo } from 'constants/networks'
-import { ChainId } from '@uniswap/sdk-core'
 
 const StyledPolling = styled.div`
   display: flex;
@@ -67,6 +66,7 @@ const Spinner = styled.div`
 export default function Polling() {
   const theme = useTheme()
   const [activeNetwork] = useActiveNetworkVersion()
+  const chainId = activeNetwork.chainId
   const [status] = useSubgraphStatus()
   const [isMounted, setIsMounted] = useState(true)
   const latestBlock = activeNetwork === EthereumNetworkInfo ? status.headBlock : status.syncedBlock
@@ -86,9 +86,7 @@ export default function Polling() {
   )
 
   return (
-    <ExternalLink
-      href={latestBlock ? getExplorerLink(ChainId.MAINNET, latestBlock.toString(), ExplorerDataType.BLOCK) : ''}
-    >
+    <ExternalLink href={latestBlock ? getExplorerLink(chainId, latestBlock.toString(), ExplorerDataType.BLOCK) : ''}>
       <StyledPolling>
         <TYPE.small mr="4px" color={theme?.text3}>
           Latest synced block:{' '}

@@ -5,6 +5,7 @@ import POLYGON_LOGO_URL from '../assets/images/polygon-logo.png'
 import CELO_LOGO_URL from '../assets/images/celo-logo.svg'
 import BNB_LOGO_URL from '../assets/images/bnb-logo.svg'
 import BASE_LOGO_URL from '../assets/images/base-logo.svg'
+import FANTOM_LOGO_URL from '../assets/images/fantom-logo.svg'
 import { ChainId } from '@uniswap/sdk-core'
 import AVALANCHE_LOGO_URL from '../assets/images/avalanche-logo.png'
 
@@ -126,17 +127,17 @@ export const FantomNetworkInfo: NetworkInfo = {
   bgColor: '#0052ff',
   primaryColor: '#0052ff',
   secondaryColor: '#0052ff',
-  imageURL: BASE_LOGO_URL,
+  imageURL: FANTOM_LOGO_URL,
 }
 
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
-  EthereumNetworkInfo,
-  PolygonNetworkInfo,
-  OptimismNetworkInfo,
-  ArbitrumNetworkInfo,
-  CeloNetworkInfo,
-  BNBNetworkInfo,
-  BaseNetworkInfo,
-  AvalancheNetworkInfo,
+  // EthereumNetworkInfo,
+  // PolygonNetworkInfo,
+  // OptimismNetworkInfo,
+  // ArbitrumNetworkInfo,
+  // CeloNetworkInfo,
+  // BNBNetworkInfo,
+  // BaseNetworkInfo,
+  // AvalancheNetworkInfo,
   FantomNetworkInfo,
 ]
