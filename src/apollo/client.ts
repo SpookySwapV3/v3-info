@@ -92,7 +92,7 @@ export const fantomBlockClient = new ApolloClient({
 })
 
 export const eonClient = new ApolloClient({
-  uri: 'https://eon-graph.horizenlabs.io/subgraphs/name/spookyswap/spooky-v3-updated/',
+  uri: 'https://eon-graph.horizenlabs.io/subgraphs/name/spookyswap/spooky-v3-updated',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
