@@ -156,6 +156,8 @@ export const BttcNetworkInfo: NetworkInfo = {
   imageURL: BITTORENT_LOGO_URL,
 }
 
+const isBttcDisabled = process.env.REACT_APP_BTTC_DISABLED === 'true'
+
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // EthereumNetworkInfo,
   // PolygonNetworkInfo,
@@ -167,5 +169,5 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // AvalancheNetworkInfo,
   FantomNetworkInfo,
   EonNetworkInfo,
-  BttcNetworkInfo,
+  ...(isBttcDisabled ? [] : [BttcNetworkInfo]), // Include BTTC only if it's not disabled
 ]
