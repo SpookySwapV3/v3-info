@@ -138,7 +138,7 @@ export const EonNetworkInfo: NetworkInfo = {
   chainId: ChainId.EON,
   id: SupportedNetwork.EON,
   route: 'eon',
-  name: 'Eon',
+  name: 'Horizen EON',
   bgColor: '#02502F',
   primaryColor: '#35D07F',
   secondaryColor: '#9ACDB2',
