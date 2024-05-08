@@ -90,6 +90,7 @@ export const initialState: PoolsState = {
     [SupportedNetwork.BASE]: {},
     [SupportedNetwork.FANTOM]: {},
     [SupportedNetwork.EON]: {},
+    [SupportedNetwork.BTTC]: {},
   },
 }
 

@@ -76,6 +76,7 @@ export const initialState: TokensState = {
     [SupportedNetwork.BASE]: {},
     [SupportedNetwork.FANTOM]: {},
     [SupportedNetwork.EON]: {},
+    [SupportedNetwork.BTTC]: {},
   },
 }
 

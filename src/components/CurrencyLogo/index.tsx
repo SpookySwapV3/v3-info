@@ -27,6 +27,8 @@ export function chainIdToNetworkName(networkId: ChainId) {
       return 'fantom'
     case ChainId.EON:
       return 'eon'
+    case ChainId.BIT_TORRENT_MAINNET:
+      return 'bittorent'
     default:
       return 'ethereum'
   }
@@ -73,6 +75,7 @@ export default function CurrencyLogo({
   const baseList = useCombinedActiveList()?.[ChainId.BASE]
   const fantomList = useCombinedActiveList()?.[ChainId.FANTOM]
   const eonList = useCombinedActiveList()?.[ChainId.EON]
+  const bttcList = useCombinedActiveList()?.[ChainId.BIT_TORRENT_MAINNET]
 
   const [activeNetwork] = useActiveNetworkVersion()
 
@@ -142,6 +145,14 @@ export default function CurrencyLogo({
   }, [checkSummed, eonList])
   const uriLocationsEon = useHttpLocations(eonURI)
 
+  const bttcURI = useMemo(() => {
+    if (checkSummed && bttcList?.[checkSummed]) {
+      return bttcList?.[checkSummed].token.logoURI
+    }
+    return undefined
+  }, [checkSummed, bttcList])
+  const uriLocationsBttc = useHttpLocations(bttcURI)
+
   //temp until token logo issue merged
   const tempSources: { [address: string]: string } = useMemo(() => {
     return {
@@ -165,6 +176,7 @@ export default function CurrencyLogo({
         ...uriLocationsBase,
         ...uriLocationsFantom,
         ...uriLocationsEon,
+        ...uriLocationsBttc,
         override,
       ]
     }
@@ -181,6 +193,7 @@ export default function CurrencyLogo({
     uriLocationsBase,
     uriLocationsFantom,
     uriLocationsEon,
+    uriLocationsBttc,
   ])
 
   if (activeNetwork === OptimismNetworkInfo && address === '0x4200000000000000000000000000000000000006') {

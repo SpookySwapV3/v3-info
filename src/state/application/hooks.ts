@@ -20,6 +20,8 @@ import {
   fantomBlockClient,
   eonClient,
   eonBlockClient,
+  bttcClient,
+  bttcBlockClient,
 } from 'apollo/client'
 import { NetworkInfo, SupportedNetwork } from 'constants/networks'
 import { useCallback, useMemo } from 'react'
@@ -158,6 +160,8 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
       return fantomClient
     case SupportedNetwork.EON:
       return eonClient
+    case SupportedNetwork.BTTC:
+      return bttcClient
     default:
       return client
   }
@@ -187,6 +191,8 @@ export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
       return fantomBlockClient
     case SupportedNetwork.EON:
       return eonBlockClient
+    case SupportedNetwork.BTTC:
+      return bttcBlockClient
     default:
       return blockClient
   }

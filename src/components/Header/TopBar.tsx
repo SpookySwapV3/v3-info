@@ -42,6 +42,8 @@ const TopBar = () => {
               <Item>FANTOM Price:</Item>
             ) : activeNetwork.id === SupportedNetwork.EON ? (
               <Item>EON Price:</Item>
+            ) : activeNetwork.id === SupportedNetwork.BTTC ? (
+              <Item>BTTC Price:</Item>
             ) : (
               <Item>Eth Price:</Item>
             )}

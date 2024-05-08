@@ -20,6 +20,7 @@ export enum SupportedNetwork {
   AVALANCHE,
   FANTOM,
   EON,
+  BTTC,
 }
 
 export type NetworkInfo = {
@@ -142,6 +143,17 @@ export const EonNetworkInfo: NetworkInfo = {
   imageURL: FANTOM_LOGO_URL,
 }
 
+export const BttcNetworkInfo: NetworkInfo = {
+  chainId: ChainId.BIT_TORRENT_MAINNET,
+  id: SupportedNetwork.BTTC,
+  route: 'bittorent',
+  name: 'Bittorent',
+  bgColor: '#0052ff',
+  primaryColor: '#0052ff',
+  secondaryColor: '#0052ff',
+  imageURL: FANTOM_LOGO_URL,
+}
+
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // EthereumNetworkInfo,
   // PolygonNetworkInfo,
@@ -153,4 +165,5 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // AvalancheNetworkInfo,
   FantomNetworkInfo,
   EonNetworkInfo,
+  BttcNetworkInfo,
 ]
