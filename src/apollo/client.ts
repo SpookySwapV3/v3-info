@@ -92,7 +92,7 @@ export const fantomBlockClient = new ApolloClient({
 })
 
 export const eonClient = new ApolloClient({
-  uri: 'https://eon-graph.horizenlabs.io/subgraphs/name/spookyswap/spooky-v3-updated/graphql',
+  uri: 'https://eon-graph.horizenlabs.io/subgraphs/name/spookyswap/spooky-v3-updated/',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -135,7 +135,7 @@ export const eonBlockClient = new ApolloClient({
 })
 
 export const bttcClient = new ApolloClient({
-  uri: 'https://btt-spooky.paintswap.finance/subgraphs/name/ianlapham/uniswap-v3/graphql',
+  uri: 'https://btt-spooky.paintswap.finance/subgraphs/name/ianlapham/uniswap-v3/',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
