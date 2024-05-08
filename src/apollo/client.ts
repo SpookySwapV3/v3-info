@@ -49,7 +49,7 @@ export const client = new ApolloClient({
 })
 
 export const fantomClient = new ApolloClient({
-  uri: 'https://api.goldsky.com/api/public/project_clss7z2o15cxh010fdvq909x6/subgraphs/fantom-v3/1.0.0/gn',
+  uri: 'https://api.thegraph.com/subgraphs/name/0xalucard/ftm-spooky-v3',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -78,6 +78,49 @@ export const fantomClient = new ApolloClient({
 
 export const fantomBlockClient = new ApolloClient({
   uri: 'https://api.thegraph.com/subgraphs/name/matthewlilley/fantom-blocks',
+  cache: new InMemoryCache(),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-first',
+    },
+    query: {
+      fetchPolicy: 'cache-first',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const eonClient = new ApolloClient({
+  uri: 'https://eon-graph.horizenlabs.io/subgraphs/name/spookyswap/spooky-v3-updated/graphql',
+  cache: new InMemoryCache({
+    typePolicies: {
+      Token: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+      Pool: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+    },
+  }),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'no-cache',
+    },
+    query: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const eonBlockClient = new ApolloClient({
+  uri: 'https://eon-graph.horizenlabs.io/subgraphs/name/0xALUKARD/eon-blocks',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {

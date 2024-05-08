@@ -18,6 +18,8 @@ import {
   baseClient,
   fantomClient,
   fantomBlockClient,
+  eonClient,
+  eonBlockClient,
 } from 'apollo/client'
 import { NetworkInfo, SupportedNetwork } from 'constants/networks'
 import { useCallback, useMemo } from 'react'
@@ -154,6 +156,8 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
       return baseClient
     case SupportedNetwork.FANTOM:
       return fantomClient
+    case SupportedNetwork.EON:
+      return eonClient
     default:
       return client
   }
@@ -181,6 +185,8 @@ export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
       return baseBlockClient
     case SupportedNetwork.FANTOM:
       return fantomBlockClient
+    case SupportedNetwork.EON:
+      return eonBlockClient
     default:
       return blockClient
   }

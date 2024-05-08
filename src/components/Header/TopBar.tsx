@@ -40,6 +40,8 @@ const TopBar = () => {
               <Item>AVAX Price:</Item>
             ) : activeNetwork.id === SupportedNetwork.FANTOM ? (
               <Item>FANTOM Price:</Item>
+            ) : activeNetwork.id === SupportedNetwork.EON ? (
+              <Item>EON Price:</Item>
             ) : (
               <Item>Eth Price:</Item>
             )}

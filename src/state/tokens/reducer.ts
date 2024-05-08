@@ -75,6 +75,7 @@ export const initialState: TokensState = {
     [SupportedNetwork.AVALANCHE]: {},
     [SupportedNetwork.BASE]: {},
     [SupportedNetwork.FANTOM]: {},
+    [SupportedNetwork.EON]: {},
   },
 }
 

@@ -19,6 +19,7 @@ export enum SupportedNetwork {
   BASE,
   AVALANCHE,
   FANTOM,
+  EON,
 }
 
 export type NetworkInfo = {
@@ -130,6 +131,17 @@ export const FantomNetworkInfo: NetworkInfo = {
   imageURL: FANTOM_LOGO_URL,
 }
 
+export const EonNetworkInfo: NetworkInfo = {
+  chainId: ChainId.EON,
+  id: SupportedNetwork.EON,
+  route: 'eon',
+  name: 'Eon',
+  bgColor: '#0052ff',
+  primaryColor: '#0052ff',
+  secondaryColor: '#0052ff',
+  imageURL: FANTOM_LOGO_URL,
+}
+
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // EthereumNetworkInfo,
   // PolygonNetworkInfo,
@@ -140,4 +152,5 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // BaseNetworkInfo,
   // AvalancheNetworkInfo,
   FantomNetworkInfo,
+  EonNetworkInfo,
 ]
