@@ -6,6 +6,8 @@ import CELO_LOGO_URL from '../assets/images/celo-logo.svg'
 import BNB_LOGO_URL from '../assets/images/bnb-logo.svg'
 import BASE_LOGO_URL from '../assets/images/base-logo.svg'
 import FANTOM_LOGO_URL from '../assets/images/fantom-logo.svg'
+import BITTORENT_LOGO_URL from '../assets/images/btt-bittorrent_logo.svg'
+import EON_LOGO_URL from '../assets/images/eon-horizen-logo.svg'
 import { ChainId } from '@uniswap/sdk-core'
 import AVALANCHE_LOGO_URL from '../assets/images/avalanche-logo.png'
 
@@ -137,10 +139,10 @@ export const EonNetworkInfo: NetworkInfo = {
   id: SupportedNetwork.EON,
   route: 'eon',
   name: 'Eon',
-  bgColor: '#0052ff',
-  primaryColor: '#0052ff',
-  secondaryColor: '#0052ff',
-  imageURL: FANTOM_LOGO_URL,
+  bgColor: '#02502F',
+  primaryColor: '#35D07F',
+  secondaryColor: '#9ACDB2',
+  imageURL: EON_LOGO_URL,
 }
 
 export const BttcNetworkInfo: NetworkInfo = {
@@ -148,10 +150,10 @@ export const BttcNetworkInfo: NetworkInfo = {
   id: SupportedNetwork.BTTC,
   route: 'bittorent',
   name: 'Bittorent',
-  bgColor: '#0052ff',
-  primaryColor: '#0052ff',
-  secondaryColor: '#0052ff',
-  imageURL: FANTOM_LOGO_URL,
+  bgColor: '#F01B36',
+  primaryColor: '#F01B36',
+  secondaryColor: '#FB7876',
+  imageURL: BITTORENT_LOGO_URL,
 }
 
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [

@@ -49,7 +49,7 @@ export const client = new ApolloClient({
 })
 
 export const fantomClient = new ApolloClient({
-  uri: 'https://api.thegraph.com/subgraphs/name/0xalucard/ftm-spooky-v3',
+  uri: 'https://api.goldsky.com/api/public/project_clss7z2o15cxh010fdvq909x6/subgraphs/fantom-v3/1.0.0/gn',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
