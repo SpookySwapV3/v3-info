@@ -81,7 +81,7 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
-const CODE_LINK = 'https://github.com/SpookySwap'
+const CODE_LINK = 'https://github.com/SpookySwapV3'
 
 export default function Menu() {
   const node = useRef<HTMLDivElement>(null)
@@ -109,7 +109,7 @@ export default function Menu() {
             <Code size={14} />
             Github
           </MenuItem>
-          <MenuItem id="link" href="https://discord.com/invite/9sypcPUMnS">
+          <MenuItem id="link" href="https://discord.com/invite/weXbvPAH4Q">
             <MessageCircle size={14} />
             Discord
           </MenuItem>
