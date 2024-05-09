@@ -69,7 +69,7 @@ export const START_BLOCKS: { [key: string]: number } = {
   [SupportedNetwork.BASE]: 1371680,
   [SupportedNetwork.FANTOM]: 70992836,
   [SupportedNetwork.EON]: 679683,
-  [SupportedNetwork.BTTC]: 0,
+  [SupportedNetwork.BTTC]: 26441276,
 }
 
 export interface WalletInfo {

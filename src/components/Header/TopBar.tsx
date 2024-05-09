@@ -53,7 +53,15 @@ const TopBar = () => {
           </RowFixed>
         </AutoRow>
         <AutoRow $gap="6px" style={{ justifyContent: 'flex-end' }}>
-          <StyledLink href="https://info.spooky.fi/">V2 Analytics</StyledLink>
+          {activeNetwork.id === SupportedNetwork.FANTOM ? (
+            <StyledLink href="https://info.spooky.fi">V2 Analytics</StyledLink>
+          ) : activeNetwork.id === SupportedNetwork.EON ? (
+            <StyledLink href="https://info.eon.spooky.fi">V2 Analytics</StyledLink>
+          ) : activeNetwork.id === SupportedNetwork.BTTC ? (
+            <StyledLink href="https://info.btt.spooky.fi">V2 Analytics</StyledLink>
+          ) : (
+            <StyledLink href="https://info.spooky.fi">V2 Analytics</StyledLink>
+          )}
           <StyledLink href="https://docs.spooky.fi">Docs</StyledLink>
           <StyledLink href="https://spooky.fi/">App</StyledLink>
         </AutoRow>
