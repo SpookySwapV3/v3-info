@@ -1,12 +1,11 @@
 // used to mark unsupported tokens, these are hosted lists of unsupported tokens
 
 export const UNSUPPORTED_LIST_URLS: string[] = []
-export const OPTIMISM_LIST = 'https://static.optimism.io/optimism.tokenlist.json'
-export const ARBITRUM_LIST = 'https://bridge.arbitrum.io/token-list-42161.json'
-export const POLYGON_LIST =
-  'https://unpkg.com/quickswap-default-token-list@1.2.2/build/quickswap-default.tokenlist.json'
-export const CELO_LIST = 'https://celo-org.github.io/celo-token-list/celo.tokenlist.json'
-export const BNB_LIST = 'https://raw.githubusercontent.com/plasmadlt/plasma-finance-token-list/master/bnb.json'
+export const OPTIMISM_LIST = ''
+export const ARBITRUM_LIST = ''
+export const POLYGON_LIST = ''
+export const CELO_LIST = ''
+export const BNB_LIST = ''
 export const FANTOM_LIST = 'https://assets.spooky.fi/ftm_spooky_tokens.json'
 export const EON_LIST = 'https://assets.spooky.fi/eon_spooky_tokens.json'
 export const BTTC_LIST = 'https://assets.spooky.fi/btt_spooky_tokens.json'
