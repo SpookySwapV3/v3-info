@@ -50,7 +50,7 @@ export function useBlocksFromTimestamps(
       if (results) {
         setBlocks({ ...(blocks ?? {}), [activeNetwork.id]: results })
       } else {
-        setError(true)
+        setError(false)
       }
     }
     if (!networkBlocks && !error) {
