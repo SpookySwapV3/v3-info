@@ -77,7 +77,7 @@ export const fantomClient = new ApolloClient({
 })
 
 export const fantomBlockClient = new ApolloClient({
-  uri: 'https://api.thegraph.com/subgraphs/name/matthewlilley/fantom-blocks',
+  uri: 'https://api.goldsky.com/api/public/project_clss7z2o15cxh010fdvq909x6/subgraphs/blocks/fantom/gn',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
