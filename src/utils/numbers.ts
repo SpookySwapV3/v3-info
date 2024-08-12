@@ -10,7 +10,7 @@ export const formatDollarAmount = (num: number | undefined, digits = 2, round = 
 
   // Handle cases where the number is between 0.001 and 1 with more precision
   if (num < 1 && num >= 0.001) {
-    return `$${num.toFixed(digits + 1)}`
+    return `$${num.toFixed(digits + 2)}`
   }
 
   // Handle very small numbers
