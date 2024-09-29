@@ -71,7 +71,10 @@ const ResponsiveLogo = styled(CurrencyLogo)`
 const DataRow = ({ tokenData, index }: { tokenData: TokenData; index: number }) => {
   const { pathname } = useLocation()
   const theme = useTheme()
-  const linkPath = pathname === '/' || pathname === '/fantom/' ? `tokens/${tokenData.address}` : tokenData.address
+  const linkPath =
+    pathname === '/' || pathname === '/fantom/' || pathname === '/eon/' || pathname === '/bittorent/'
+      ? `tokens/${tokenData.address}`
+      : tokenData.address
 
   return (
     <LinkWrapper to={linkPath}>
