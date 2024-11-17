@@ -29,6 +29,8 @@ export function chainIdToNetworkName(networkId: ChainId) {
       return 'eon'
     case ChainId.BIT_TORRENT_MAINNET:
       return 'bittorent'
+    case ChainId.GOAT_TESTNET:
+      return 'goattestnet'
     default:
       return 'ethereum'
   }
@@ -76,6 +78,7 @@ export default function CurrencyLogo({
   const fantomList = useCombinedActiveList()?.[ChainId.FANTOM]
   const eonList = useCombinedActiveList()?.[ChainId.EON]
   const bttcList = useCombinedActiveList()?.[ChainId.BIT_TORRENT_MAINNET]
+  const goatTestnetList = useCombinedActiveList()?.[ChainId.GOAT_TESTNET]
 
   const [activeNetwork] = useActiveNetworkVersion()
 
@@ -153,6 +156,14 @@ export default function CurrencyLogo({
   }, [checkSummed, bttcList])
   const uriLocationsBttc = useHttpLocations(bttcURI)
 
+  const goatTestnetURI = useMemo(() => {
+    if (checkSummed && goatTestnetList?.[checkSummed]) {
+      return goatTestnetList?.[checkSummed].token.logoURI
+    }
+    return undefined
+  }, [checkSummed, goatTestnetList])
+  const uriLocationsGoatTestnet = useHttpLocations(goatTestnetURI)
+
   //temp until token logo issue merged
   const tempSources: { [address: string]: string } = useMemo(() => {
     return {
@@ -177,6 +188,7 @@ export default function CurrencyLogo({
         ...uriLocationsFantom,
         ...uriLocationsEon,
         ...uriLocationsBttc,
+        ...uriLocationsGoatTestnet,
         override,
       ]
     }
@@ -194,6 +206,7 @@ export default function CurrencyLogo({
     uriLocationsFantom,
     uriLocationsEon,
     uriLocationsBttc,
+    uriLocationsGoatTestnet,
   ])
 
   if (activeNetwork === OptimismNetworkInfo && address === '0x4200000000000000000000000000000000000006') {

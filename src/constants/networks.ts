@@ -8,6 +8,7 @@ import BASE_LOGO_URL from '../assets/images/base-logo.svg'
 import FANTOM_LOGO_URL from '../assets/images/fantom-logo.svg'
 import BITTORENT_LOGO_URL from '../assets/images/btt-bittorrent_logo.svg'
 import EON_LOGO_URL from '../assets/images/eon-horizen-logo.svg'
+import GOAT_TESTNET_LOGO_URL from '../assets/images/goat-testnet.svg'
 import { ChainId } from '@uniswap/sdk-core'
 import AVALANCHE_LOGO_URL from '../assets/images/avalanche-logo.png'
 
@@ -23,6 +24,7 @@ export enum SupportedNetwork {
   FANTOM,
   EON,
   BTTC,
+  GOATTESTNET,
 }
 
 export type NetworkInfo = {
@@ -156,6 +158,17 @@ export const BttcNetworkInfo: NetworkInfo = {
   imageURL: BITTORENT_LOGO_URL,
 }
 
+export const GoatTestnetNetworkInfo: NetworkInfo = {
+  chainId: ChainId.GOAT_TESTNET,
+  id: SupportedNetwork.GOATTESTNET,
+  route: 'goattestnet',
+  name: 'goattestnet',
+  bgColor: '#F01B36',
+  primaryColor: '#F01B36',
+  secondaryColor: '#FB7876',
+  imageURL: GOAT_TESTNET_LOGO_URL,
+}
+
 const isBttcDisabled = process.env.REACT_APP_BTTC_DISABLED === 'true'
 
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
@@ -169,5 +182,6 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // AvalancheNetworkInfo,
   FantomNetworkInfo,
   EonNetworkInfo,
+  GoatTestnetNetworkInfo,
   ...(isBttcDisabled ? [] : [BttcNetworkInfo]), // Include BTTC only if it's not disabled
 ]

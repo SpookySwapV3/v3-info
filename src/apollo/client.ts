@@ -177,6 +177,49 @@ export const bttcBlockClient = new ApolloClient({
   },
 })
 
+export const goatTestnetClient = new ApolloClient({
+  uri: 'https://api.goat.0xgraph.xyz/api/public/f31d1ab2-5380-484e-bfc2-d2b8d606add5/subgraphs/goatswap/v0.0.1/gn',
+  cache: new InMemoryCache({
+    typePolicies: {
+      Token: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+      Pool: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+    },
+  }),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'no-cache',
+    },
+    query: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const goatTestnetBlockClient = new ApolloClient({
+  uri: 'https://api.goat.0xgraph.xyz/api/public/f31d1ab2-5380-484e-bfc2-d2b8d606add5/subgraphs/ormi/blocks/v0.0.4/gn',
+  cache: new InMemoryCache(),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-first',
+    },
+    query: {
+      fetchPolicy: 'cache-first',
+      errorPolicy: 'all',
+    },
+  },
+})
+
 export const avalancheClient = new ApolloClient({
   uri: 'https://api.thegraph.com/subgraphs/name/lynnshaoyu/uniswap-v3-avax?source=uniswap',
   cache: new InMemoryCache({
