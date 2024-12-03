@@ -13,17 +13,17 @@ import { ChainId } from '@uniswap/sdk-core'
 import AVALANCHE_LOGO_URL from '../assets/images/avalanche-logo.png'
 
 export enum SupportedNetwork {
-  // ETHEREUM,
-  // ARBITRUM,
-  // OPTIMISM,
-  // POLYGON,
-  // CELO,
-  // BNB,
-  // BASE,
-  // AVALANCHE,
-  // FANTOM,
-  // EON,
-  // BTTC,
+  ETHEREUM,
+  ARBITRUM,
+  OPTIMISM,
+  POLYGON,
+  CELO,
+  BNB,
+  BASE,
+  AVALANCHE,
+  FANTOM,
+  EON,
+  BTTC,
   GOATTESTNET,
 }
 
@@ -169,7 +169,7 @@ export const GoatTestnetNetworkInfo: NetworkInfo = {
   imageURL: GOAT_TESTNET_LOGO_URL,
 }
 
-const isBttcDisabled = process.env.REACT_APP_BTTC_DISABLED === 'true'
+// const isBttcDisabled = process.env.REACT_APP_BTTC_DISABLED === 'true'
 
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // EthereumNetworkInfo,
