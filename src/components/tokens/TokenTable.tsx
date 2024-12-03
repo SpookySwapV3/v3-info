@@ -4,7 +4,7 @@ import { ExtraSmallOnly, HideExtraSmall, TYPE } from 'theme'
 import { DarkGreyCard } from 'components/Card'
 import { TokenData } from '../../state/tokens/reducer'
 import Loader, { LoadingRows } from 'components/Loader'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { AutoColumn } from 'components/Column'
 import CurrencyLogo from 'components/CurrencyLogo'
 import { RowFixed } from 'components/Row'
@@ -16,6 +16,7 @@ import HoverInlineText from '../HoverInlineText'
 import useTheme from 'hooks/useTheme'
 import { TOKEN_HIDE } from '../../constants/index'
 import { useActiveNetworkVersion } from 'state/application/hooks'
+import { networkPrefix } from 'utils/networkPrefix'
 
 const Wrapper = styled(DarkGreyCard)`
   width: 100%;
@@ -69,15 +70,11 @@ const ResponsiveLogo = styled(CurrencyLogo)`
 `
 
 const DataRow = ({ tokenData, index }: { tokenData: TokenData; index: number }) => {
-  const { pathname } = useLocation()
   const theme = useTheme()
-  const linkPath =
-    pathname === '/' || pathname === '/fantom/' || pathname === '/eon/' || pathname === '/bittorent/'
-      ? `tokens/${tokenData.address}`
-      : tokenData.address
+  const [activeNetwork] = useActiveNetworkVersion()
 
   return (
-    <LinkWrapper to={linkPath}>
+    <LinkWrapper to={networkPrefix(activeNetwork) + 'tokens/' + tokenData.address}>
       <ResponsiveGrid>
         <Label>{index + 1}</Label>
         <Label>

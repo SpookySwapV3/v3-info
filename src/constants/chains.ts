@@ -79,15 +79,15 @@ export const TESTNET_CHAIN_IDS = [
  * All the chain IDs that are running the Ethereum protocol.
  */
 export const L1_CHAIN_IDS = [
-  ChainId.MAINNET,
-  ChainId.GOERLI,
-  ChainId.SEPOLIA,
-  ChainId.POLYGON,
-  ChainId.POLYGON_MUMBAI,
-  ChainId.CELO,
-  ChainId.CELO_ALFAJORES,
-  ChainId.BNB,
-  ChainId.AVALANCHE,
+  // ChainId.MAINNET,
+  // ChainId.GOERLI,
+  // ChainId.SEPOLIA,
+  // ChainId.POLYGON,
+  // ChainId.POLYGON_MUMBAI,
+  // ChainId.CELO,
+  // ChainId.CELO_ALFAJORES,
+  // ChainId.BNB,
+  // ChainId.AVALANCHE,
   ChainId.FANTOM,
   ChainId.EON,
   ChainId.BIT_TORRENT_MAINNET,
@@ -117,11 +117,11 @@ export type SupportedL2ChainId = (typeof L2_CHAIN_IDS)[number]
 export function getChainPriority(chainId: ChainId): number {
   switch (chainId) {
     case ChainId.FANTOM:
+      return 0
+    case ChainId.EON:
     case ChainId.MAINNET:
     case ChainId.GOERLI:
     case ChainId.SEPOLIA:
-      return 0
-    case ChainId.EON:
     case ChainId.ARBITRUM_ONE:
     case ChainId.ARBITRUM_GOERLI:
       return 1
