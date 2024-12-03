@@ -72,7 +72,7 @@ const DataRow = ({ tokenData, index }: { tokenData: TokenData; index: number }) 
   const { pathname } = useLocation()
   const theme = useTheme()
   const linkPath =
-    pathname === '/' || pathname === '/fantom/' || pathname === '/eon/' || pathname === '/bittorent/'
+    pathname === '/' || pathname === '/fantom/' || pathname === '/eon/' || pathname === '/bittorent/' || pathname === '/goattestnet/'
       ? `tokens/${tokenData.address}`
       : tokenData.address
 
