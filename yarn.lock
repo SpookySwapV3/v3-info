@@ -3658,10 +3658,10 @@
     tiny-invariant "^1.1.0"
     toformat "^2.0.0"
 
-"@uniswap/sdk-core@npm:@spookyswaptestnet/sdk-core@1.0.27-goat006":
-  version "1.0.27-goat006"
-  resolved "https://registry.yarnpkg.com/@spookyswaptestnet/sdk-core/-/sdk-core-1.0.27-goat006.tgz#33fef6defa6c3be7488235883f5828c79cda7cbb"
-  integrity sha512-L5k5vyENPv/1ip1gqOjzbLLf70F/LJShJrB/AtuE+tOVnvXTLweaBra6n6cz5w8b4XpckOjsoV5hT7bqvO8gsA==
+"@uniswap/sdk-core@npm:@spookyswaptestnet/sdk-core@1.0.28-goat000":
+  version "1.0.28-goat000"
+  resolved "https://registry.yarnpkg.com/@spookyswaptestnet/sdk-core/-/sdk-core-1.0.28-goat000.tgz#78585cf3270816fea64df78fea20ee49d0f3e4ed"
+  integrity sha512-DIIqXISxf8Xx0zs+YFt7GX/HroTyMy2EJcsNUbnZzrZVT3cWCEJLUaSWFgXLSw+96Pf/+ODNxVuThIKWASgMWQ==
   dependencies:
     "@ethersproject/address" "^5.0.2"
     big.js "^5.2.2"

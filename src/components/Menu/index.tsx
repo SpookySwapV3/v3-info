@@ -97,11 +97,11 @@ export default function Menu() {
 
       {isOpen && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://spooky.fi/">
+          <MenuItem id="link" href="https://goatswap.fi/">
             <Info size={14} />
             About
           </MenuItem>
-          <MenuItem id="link" href="https://docs.spooky.fi">
+          <MenuItem id="link" href="https://docs.goatsw.app/">
             <BookOpen size={14} />
             Docs
           </MenuItem>
@@ -109,7 +109,7 @@ export default function Menu() {
             <Code size={14} />
             Github
           </MenuItem>
-          <MenuItem id="link" href="https://discord.com/invite/weXbvPAH4Q">
+          <MenuItem id="link" href="https://discord.com/invite/yx5BvVkbES">
             <MessageCircle size={14} />
             Discord
           </MenuItem>

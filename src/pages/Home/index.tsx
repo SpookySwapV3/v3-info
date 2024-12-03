@@ -130,7 +130,7 @@ export default function Home() {
       <PageWrapper>
         <ThemedBackgroundGlobal $backgroundColor={activeNetwork.bgColor} />
         <AutoColumn $gap="16px">
-          <TYPE.main>SpookySwap V3 Overview</TYPE.main>
+          <TYPE.main>GoatSwap Overview</TYPE.main>
           <ResponsiveRow>
             <ChartWrapper>
               <LineChart
@@ -166,7 +166,7 @@ export default function Home() {
                     ? weeklyVolumeData
                     : formattedVolumeData
                 }
-                color={theme?.blue1}
+                color={activeNetwork.bgColor}
                 setValue={setVolumeHover}
                 setLabel={setRightLabel}
                 value={volumeHover}

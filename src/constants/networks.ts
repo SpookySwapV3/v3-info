@@ -13,17 +13,17 @@ import { ChainId } from '@uniswap/sdk-core'
 import AVALANCHE_LOGO_URL from '../assets/images/avalanche-logo.png'
 
 export enum SupportedNetwork {
-  ETHEREUM,
-  ARBITRUM,
-  OPTIMISM,
-  POLYGON,
-  CELO,
-  BNB,
-  BASE,
-  AVALANCHE,
-  FANTOM,
-  EON,
-  BTTC,
+  // ETHEREUM,
+  // ARBITRUM,
+  // OPTIMISM,
+  // POLYGON,
+  // CELO,
+  // BNB,
+  // BASE,
+  // AVALANCHE,
+  // FANTOM,
+  // EON,
+  // BTTC,
   GOATTESTNET,
 }
 
@@ -162,9 +162,9 @@ export const GoatTestnetNetworkInfo: NetworkInfo = {
   chainId: ChainId.GOAT_TESTNET,
   id: SupportedNetwork.GOATTESTNET,
   route: 'goattestnet',
-  name: 'goattestnet',
-  bgColor: '#F01B36',
-  primaryColor: '#F01B36',
+  name: 'Goat Testnet',
+  bgColor: 'rgb(222, 175, 46)',
+  primaryColor: 'rgb(222, 175, 46)',
   secondaryColor: '#FB7876',
   imageURL: GOAT_TESTNET_LOGO_URL,
 }
@@ -180,8 +180,8 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // BNBNetworkInfo,
   // BaseNetworkInfo,
   // AvalancheNetworkInfo,
-  FantomNetworkInfo,
-  EonNetworkInfo,
+  // FantomNetworkInfo,
+  // EonNetworkInfo,
   GoatTestnetNetworkInfo,
-  ...(isBttcDisabled ? [] : [BttcNetworkInfo]), // Include BTTC only if it's not disabled
+  // ...(isBttcDisabled ? [] : [BttcNetworkInfo]), // Include BTTC only if it's not disabled
 ]

@@ -35,7 +35,7 @@ const BLOCK_EXPLORER_PREFIXES: { [chainId: number]: string } = {
   [ChainId.FANTOM]: 'https://ftmscan.com',
   [ChainId.EON]: 'https://eon-explorer.horizenlabs.io/',
   [ChainId.BIT_TORRENT_MAINNET]: 'https://bttcscan.com/',
-  [ChainId.GOAT_TESTNET]: 'https://explorer.testnet.goat.network/',
+  [ChainId.GOAT_TESTNET]: 'https://explorer.testnet3.goat.network',
 }
 
 export enum ExplorerDataType {

@@ -44,6 +44,8 @@ const TopBar = () => {
               <Item>EON Price:</Item>
             ) : activeNetwork.id === SupportedNetwork.BTTC ? (
               <Item>BTTC Price:</Item>
+            ) : activeNetwork.id === SupportedNetwork.GOATTESTNET ? (
+              <Item>BTC Price:</Item>
             ) : (
               <Item>Eth Price:</Item>
             )}
@@ -59,11 +61,13 @@ const TopBar = () => {
             <StyledLink href="https://info.eon.spooky.fi">V2 Analytics</StyledLink>
           ) : activeNetwork.id === SupportedNetwork.BTTC ? (
             <StyledLink href="https://info.btt.spooky.fi">V2 Analytics</StyledLink>
+          ) : activeNetwork.id === SupportedNetwork.GOATTESTNET ? (
+            <></>
           ) : (
-            <StyledLink href="https://info.spooky.fi">V2 Analytics</StyledLink>
+            <></>
           )}
-          <StyledLink href="https://docs.spooky.fi">Docs</StyledLink>
-          <StyledLink href="https://spooky.fi/">App</StyledLink>
+          <StyledLink href="https://docs.goatsw.app/">Docs</StyledLink>
+          <StyledLink href="https://goatswap.fi/">App</StyledLink>
         </AutoRow>
       </RowBetween>
     </Wrapper>

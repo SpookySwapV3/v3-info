@@ -142,28 +142,28 @@ export function useActiveNetworkVersion(): [NetworkInfo, (activeNetworkVersion: 
 export function useDataClient(): ApolloClient<NormalizedCacheObject> {
   const [activeNetwork] = useActiveNetworkVersion()
   switch (activeNetwork.id) {
-    case SupportedNetwork.ETHEREUM:
-      return client
-    case SupportedNetwork.ARBITRUM:
-      return arbitrumClient
-    case SupportedNetwork.OPTIMISM:
-      return optimismClient
-    case SupportedNetwork.POLYGON:
-      return polygonClient
-    case SupportedNetwork.CELO:
-      return celoClient
-    case SupportedNetwork.BNB:
-      return bscClient
-    case SupportedNetwork.AVALANCHE:
-      return avalancheClient
-    case SupportedNetwork.BASE:
-      return baseClient
-    case SupportedNetwork.FANTOM:
-      return fantomClient
-    case SupportedNetwork.EON:
-      return eonClient
-    case SupportedNetwork.BTTC:
-      return bttcClient
+    // case SupportedNetwork.ETHEREUM:
+    //   return client
+    // case SupportedNetwork.ARBITRUM:
+    //   return arbitrumClient
+    // case SupportedNetwork.OPTIMISM:
+    //   return optimismClient
+    // case SupportedNetwork.POLYGON:
+    //   return polygonClient
+    // case SupportedNetwork.CELO:
+    //   return celoClient
+    // case SupportedNetwork.BNB:
+    //   return bscClient
+    // case SupportedNetwork.AVALANCHE:
+    //   return avalancheClient
+    // case SupportedNetwork.BASE:
+    //   return baseClient
+    // case SupportedNetwork.FANTOM:
+    //   return fantomClient
+    // case SupportedNetwork.EON:
+    //   return eonClient
+    // case SupportedNetwork.BTTC:
+    //   return bttcClient
     case SupportedNetwork.GOATTESTNET:
       return goatTestnetClient
     default:
@@ -175,28 +175,28 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
 export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
   const [activeNetwork] = useActiveNetworkVersion()
   switch (activeNetwork.id) {
-    case SupportedNetwork.ETHEREUM:
-      return blockClient
-    case SupportedNetwork.ARBITRUM:
-      return arbitrumBlockClient
-    case SupportedNetwork.OPTIMISM:
-      return optimismBlockClient
-    case SupportedNetwork.POLYGON:
-      return polygonBlockClient
-    case SupportedNetwork.CELO:
-      return celoBlockClient
-    case SupportedNetwork.BNB:
-      return bscBlockClient
-    case SupportedNetwork.AVALANCHE:
-      return avalancheBlockClient
-    case SupportedNetwork.BASE:
-      return baseBlockClient
-    case SupportedNetwork.FANTOM:
-      return fantomBlockClient
-    case SupportedNetwork.EON:
-      return eonBlockClient
-    case SupportedNetwork.BTTC:
-      return bttcBlockClient
+    // case SupportedNetwork.ETHEREUM:
+    //   return blockClient
+    // case SupportedNetwork.ARBITRUM:
+    //   return arbitrumBlockClient
+    // case SupportedNetwork.OPTIMISM:
+    //   return optimismBlockClient
+    // case SupportedNetwork.POLYGON:
+    //   return polygonBlockClient
+    // case SupportedNetwork.CELO:
+    //   return celoBlockClient
+    // case SupportedNetwork.BNB:
+    //   return bscBlockClient
+    // case SupportedNetwork.AVALANCHE:
+    //   return avalancheBlockClient
+    // case SupportedNetwork.BASE:
+    //   return baseBlockClient
+    // case SupportedNetwork.FANTOM:
+    //   return fantomBlockClient
+    // case SupportedNetwork.EON:
+    //   return eonBlockClient
+    // case SupportedNetwork.BTTC:
+    //   return bttcBlockClient
     case SupportedNetwork.GOATTESTNET:
       return goatTestnetBlockClient
     default:

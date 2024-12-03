@@ -27,13 +27,5 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
 
 // default lists to be 'active' aka searched across
 export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
-  BTTC_LIST,
-  EON_LIST,
-  FANTOM_LIST,
   GOAT_TESTNET_LIST,
-  OPTIMISM_LIST,
-  ARBITRUM_LIST,
-  POLYGON_LIST,
-  CELO_LIST,
-  BNB_LIST,
 ]

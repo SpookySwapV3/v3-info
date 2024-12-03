@@ -1,5 +1,5 @@
 import React from 'react'
-import v3 from '../../assets/gif/grim_ani.gif'
+import v3 from '../../assets/gif/happy_goat_new.gif'
 import styled, { keyframes, css } from 'styled-components'
 
 const rotate = keyframes`
@@ -80,7 +80,16 @@ export const LocalLoader = ({ fill }: { fill: boolean }) => {
   return (
     <Wrapper fill={fill ? 1 : 0}>
       <AnimatedImg>
-        <img src={v3} alt="loading-icon" />
+        <img 
+          src={v3} 
+          alt="loading-icon" 
+          style={{ 
+            width: "50%", 
+            height: "auto",
+            margin: "auto", 
+            display: "block" 
+          }} 
+        />
       </AnimatedImg>
     </Wrapper>
   )
