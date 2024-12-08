@@ -178,7 +178,7 @@ export const bttcBlockClient = new ApolloClient({
 })
 
 export const goatTestnetClient = new ApolloClient({
-  uri: 'https://api.goat.0xgraph.xyz/api/public/f31d1ab2-5380-484e-bfc2-d2b8d606add5/subgraphs/goatswap/v0.0.1/gn',
+  uri: 'https://api.goat.0xgraph.xyz/api/public/f31d1ab2-5380-484e-bfc2-d2b8d606add5/subgraphs/goatswap/-/gn',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
