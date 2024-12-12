@@ -34,6 +34,7 @@ export const TOKEN_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.FANTOM]: [],
   [SupportedNetwork.EON]: [],
   [SupportedNetwork.BTTC]: [],
+  [SupportedNetwork.SONIC]: [],
 }
 
 export const POOL_HIDE: { [key: string]: string[] } = {
@@ -56,6 +57,7 @@ export const POOL_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.FANTOM]: [],
   [SupportedNetwork.EON]: [],
   [SupportedNetwork.BTTC]: [],
+  [SupportedNetwork.SONIC]: [],
 }
 
 export const START_BLOCKS: { [key: string]: number } = {
@@ -70,6 +72,7 @@ export const START_BLOCKS: { [key: string]: number } = {
   [SupportedNetwork.FANTOM]: 70992836,
   [SupportedNetwork.EON]: 679683,
   [SupportedNetwork.BTTC]: 26441276,
+  [SupportedNetwork.SONIC]: 286535,
 }
 
 export interface WalletInfo {

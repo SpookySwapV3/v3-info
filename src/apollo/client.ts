@@ -91,6 +91,49 @@ export const fantomBlockClient = new ApolloClient({
   },
 })
 
+export const sonicClient = new ApolloClient({
+  uri: 'https://api.0xgraph.xyz/api/public/28820bd2-ad8b-4d40-a142-ce8d7c786f66/subgraphs/spookyswap/v3/-/gn',
+  cache: new InMemoryCache({
+    typePolicies: {
+      Token: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+      Pool: {
+        // Singleton types that have no identifying field can use an empty
+        // array for their keyFields.
+        keyFields: false,
+      },
+    },
+  }),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'no-cache',
+    },
+    query: {
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'all',
+    },
+  },
+})
+
+export const sonicBlockClient = new ApolloClient({
+  uri: '',
+  cache: new InMemoryCache(),
+  queryDeduplication: true,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-first',
+    },
+    query: {
+      fetchPolicy: 'cache-first',
+      errorPolicy: 'all',
+    },
+  },
+})
+
 export const eonClient = new ApolloClient({
   uri: 'https://eon-graph.horizenlabs.io/subgraphs/name/spookyswap/spooky-v3-updated',
   cache: new InMemoryCache({

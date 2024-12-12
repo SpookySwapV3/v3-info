@@ -9,9 +9,11 @@ export const BNB_LIST = ''
 export const FANTOM_LIST = 'https://assets.spooky.fi/ftm_spooky_tokens.json'
 export const EON_LIST = 'https://assets.spooky.fi/eon_spooky_tokens.json'
 export const BTTC_LIST = 'https://assets.spooky.fi/btt_spooky_tokens.json'
+export const SONIC_LIST = 'https://assets.spooky.fi/sonic_spooky_tokens.json'
 
 // lower index == higher priority for token import
 export const DEFAULT_LIST_OF_LISTS: string[] = [
+  SONIC_LIST,
   BTTC_LIST,
   EON_LIST,
   FANTOM_LIST,
@@ -25,6 +27,7 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
 
 // default lists to be 'active' aka searched across
 export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
+  SONIC_LIST,
   BTTC_LIST,
   EON_LIST,
   FANTOM_LIST,

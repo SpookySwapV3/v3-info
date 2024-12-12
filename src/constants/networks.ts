@@ -8,6 +8,7 @@ import BASE_LOGO_URL from '../assets/images/base-logo.svg'
 import FANTOM_LOGO_URL from '../assets/images/fantom-logo.svg'
 import BITTORENT_LOGO_URL from '../assets/images/btt-bittorrent_logo.svg'
 import EON_LOGO_URL from '../assets/images/eon-horizen-logo.svg'
+import SONIC_LOGO_URL from '../assets/images/sonic-white.png'
 import { ChainId } from '@uniswap/sdk-core'
 import AVALANCHE_LOGO_URL from '../assets/images/avalanche-logo.png'
 
@@ -23,6 +24,7 @@ export enum SupportedNetwork {
   FANTOM,
   EON,
   BTTC,
+  SONIC,
 }
 
 export type NetworkInfo = {
@@ -156,6 +158,17 @@ export const BttcNetworkInfo: NetworkInfo = {
   imageURL: BITTORENT_LOGO_URL,
 }
 
+export const SonicNetworkInfo: NetworkInfo = {
+  chainId: ChainId.SONIC,
+  id: SupportedNetwork.SONIC,
+  route: 'sonic',
+  name: 'Sonic',
+  bgColor: '#FFFFFF',
+  primaryColor: '#FFFFFF',
+  secondaryColor: '#FFFFFF',
+  imageURL: SONIC_LOGO_URL,
+}
+
 const isBttcDisabled = process.env.REACT_APP_BTTC_DISABLED === 'true'
 
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
@@ -167,6 +180,7 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // BNBNetworkInfo,
   // BaseNetworkInfo,
   // AvalancheNetworkInfo,
+  SonicNetworkInfo,
   FantomNetworkInfo,
   EonNetworkInfo,
   ...(isBttcDisabled ? [] : [BttcNetworkInfo]), // Include BTTC only if it's not disabled
