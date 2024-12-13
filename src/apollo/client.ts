@@ -120,7 +120,7 @@ export const sonicClient = new ApolloClient({
 })
 
 export const sonicBlockClient = new ApolloClient({
-  uri: '',
+  uri: 'https://api.0xgraph.xyz/api/public/cd32e813-81db-4a20-948b-22285458fdad/subgraphs/sonic/blocks/v0.0.1/gn',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
