@@ -57,7 +57,7 @@ export const POOL_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.FANTOM]: [],
   [SupportedNetwork.EON]: [],
   [SupportedNetwork.BTTC]: [],
-  [SupportedNetwork.SONIC]: [],
+  [SupportedNetwork.SONIC]: ['0x29bf9098cfbb70f0707c53103d3f456850e5e032'],
 }
 
 export const START_BLOCKS: { [key: string]: number } = {
