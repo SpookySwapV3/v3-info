@@ -34,7 +34,10 @@ export const TOKEN_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.FANTOM]: [],
   [SupportedNetwork.EON]: [],
   [SupportedNetwork.BTTC]: [],
-  [SupportedNetwork.SONIC]: [],
+  [SupportedNetwork.SONIC]: [
+    '0xf8e5fada166c3f8b0a84d0065a77e07d3ef1da57',
+    '0x07f1c4d0383144657b52879c91136a3821f00bf2',
+  ],
 }
 
 export const POOL_HIDE: { [key: string]: string[] } = {
@@ -57,7 +60,10 @@ export const POOL_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.FANTOM]: [],
   [SupportedNetwork.EON]: [],
   [SupportedNetwork.BTTC]: [],
-  [SupportedNetwork.SONIC]: ['0x29bf9098cfbb70f0707c53103d3f456850e5e032'],
+  [SupportedNetwork.SONIC]: [
+    '0xd792f1e38938009bbf948adbdd2ade969d50f14b',
+    '0xdf2a3f873721cab91b8760e78e4ec50b6608fe87',
+  ],
 }
 
 export const START_BLOCKS: { [key: string]: number } = {

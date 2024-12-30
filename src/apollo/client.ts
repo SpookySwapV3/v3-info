@@ -92,7 +92,7 @@ export const fantomBlockClient = new ApolloClient({
 })
 
 export const sonicClient = new ApolloClient({
-  uri: 'https://api.0xgraph.xyz/api/public/28820bd2-ad8b-4d40-a142-ce8d7c786f66/subgraphs/spookyswap/v3-upgraded/v0.0.1/gn',
+  uri: 'https://api.0xgraph.xyz/api/public/28820bd2-ad8b-4d40-a142-ce8d7c786f66/subgraphs/spookyswap/v3/v0.0.1/gn',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
