@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 import JSBI from 'jsbi'
 import keyBy from 'lodash.keyby'
-import { TickMath, tickToPrice, TICK_SPACINGS } from '@uniswap/v3-sdk'
+import { TickMath, tickToPrice, TICK_SPACINGS, FeeAmount } from '@uniswap/v3-sdk'
 import { Token } from '@uniswap/sdk-core'
 import { ApolloClient, NormalizedCacheObject } from '@apollo/client'
 
@@ -180,7 +180,7 @@ export const fetchTicksSurroundingPrice = async (
   } = poolResult
 
   const poolCurrentTickIdx = parseInt(poolCurrentTick)
-  const tickSpacing = TICK_SPACINGS[feeTier]
+  const tickSpacing = TICK_SPACINGS[feeTier as unknown as FeeAmount]
 
   // The pools current tick isn't necessarily a tick that can actually be initialized.
   // Find the nearest valid tick given the tick spacing.
