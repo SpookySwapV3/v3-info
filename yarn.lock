@@ -3646,10 +3646,10 @@
   resolved "https://registry.yarnpkg.com/@uniswap/merkle-distributor/-/merkle-distributor-1.0.1.tgz#dc3d911f65a860fc3f0cae074bdcd08ed6a27a4d"
   integrity sha512-5gDiTI5hrXIh5UWTrxKYjw30QQDnpl8ckDSpefldNenDlYO1RKkdUYMYpvrqGi2r7YzLYTlO6+TDlNs6O7hDRw==
 
-"@uniswap/sdk-core@^4":
-  version "4.0.9"
-  resolved "https://registry.yarnpkg.com/@uniswap/sdk-core/-/sdk-core-4.0.9.tgz#7aef87de6d944307ce9bd57d1e1adfdcb2fed3ee"
-  integrity sha512-/0K+u3ZWokpj9VyRuGwrwx7jy31auJdsw5UbKnvHqUSfejrp6XhmMPNOElPgL6jiUhAN1NhVHfjX01tNHFxeLA==
+"@uniswap/sdk-core@^4.2.0":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@uniswap/sdk-core/-/sdk-core-4.2.1.tgz#7b8c6fee48446bb67a4e6f2e9cb94c862034a6c3"
+  integrity sha512-hr7vwYrXScg+V8/rRc2UL/Ixc/p0P7yqe4D/OxzUdMRYr8RZd+8z5Iu9+WembjZT/DCdbTjde6lsph4Og0n1BQ==
   dependencies:
     "@ethersproject/address" "^5.0.2"
     big.js "^5.2.2"
@@ -3726,14 +3726,14 @@
     "@uniswap/v3-core" "^1.0.0"
     base64-sol "1.0.1"
 
-"@uniswap/v3-sdk@^3.10.0":
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/@uniswap/v3-sdk/-/v3-sdk-3.10.0.tgz#962c9e598250ced00702d944783c2d9ee3fa12f6"
-  integrity sha512-sbmSA1O+Ct960r66Ie/c1rOmVadpwRu8nQ79pGICv0pZJdnFIQ/SReG3F+iC2C2UNNjNP6aC2WDUggXrjyrgnA==
+"@uniswap/v3-sdk@npm:@spookyswaptestnet/v3-sdk@3.11.1":
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/@spookyswaptestnet/v3-sdk/-/v3-sdk-3.11.1.tgz#8ad8d8fd0d34f5066fa41f2b434b2431b54e4051"
+  integrity sha512-aM0WMP4Fe6b21q1+o6rVwZbvqd2D5+lKr/9+fyn9Fq93EGunlQiG6V3B7yv5sDOcS1eIvhMZk9gRtMotxfM00A==
   dependencies:
     "@ethersproject/abi" "^5.0.12"
     "@ethersproject/solidity" "^5.0.9"
-    "@uniswap/sdk-core" "^4"
+    "@uniswap/sdk-core" "^4.2.0"
     "@uniswap/swap-router-contracts" "^1.2.1"
     "@uniswap/v3-periphery" "^1.1.1"
     "@uniswap/v3-staker" "1.0.0"
