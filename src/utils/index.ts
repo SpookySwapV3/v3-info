@@ -126,7 +126,7 @@ export function isTokenOnList(tokenAddressMap: TokenAddressMap, token?: Token): 
 }
 
 export function feeTierPercent(fee: number): string {
-  return (fee / 10000).toPrecision(1) + '%'
+  return ((fee / 10000).toPrecision(2) / 1 ) + '%'
 }
 
 export function notEmpty<TValue>(value: TValue | null | undefined): value is TValue {
