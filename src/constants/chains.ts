@@ -19,6 +19,7 @@ export const CHAIN_IDS_TO_NAMES = {
   [ChainId.EON]: 'eon',
   [ChainId.BIT_TORRENT_MAINNET]: 'bittorent',
   [ChainId.GOAT_TESTNET]: 'goattestnet',
+  [ChainId.GOAT]: 'goat',
 } as const
 
 // Include ChainIds in this array if they are not supported by the UX yet, but are already in the SDK.
@@ -61,6 +62,7 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
   ChainId.EON,
   ChainId.BIT_TORRENT_MAINNET,
   ChainId.GOAT_TESTNET,
+  ChainId.GOAT,
 ] as const
 
 /**
@@ -93,7 +95,8 @@ export const L1_CHAIN_IDS = [
   // ChainId.FANTOM,
   // ChainId.EON,
   // ChainId.BIT_TORRENT_MAINNET,
-  ChainId.GOAT_TESTNET,
+  // ChainId.GOAT_TESTNET,
+  ChainId.GOAT,
 ] as const
 
 export type SupportedL1ChainId = (typeof L1_CHAIN_IDS)[number]
@@ -119,8 +122,9 @@ export type SupportedL2ChainId = (typeof L2_CHAIN_IDS)[number]
  */
 export function getChainPriority(chainId: ChainId): number {
   switch (chainId) {
-    case ChainId.GOAT_TESTNET:
+    case ChainId.GOAT:
       return 0
+    case ChainId.GOAT_TESTNET:
     case ChainId.FANTOM:
     case ChainId.MAINNET:
     case ChainId.GOERLI:

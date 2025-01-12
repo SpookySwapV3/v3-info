@@ -92,6 +92,7 @@ export const initialState: PoolsState = {
     [SupportedNetwork.EON]: {},
     [SupportedNetwork.BTTC]: {},
     [SupportedNetwork.GOATTESTNET]: {},
+    [SupportedNetwork.GOAT]: {},
   },
 }
 

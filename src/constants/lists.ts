@@ -10,6 +10,7 @@ export const FANTOM_LIST = 'https://assets.spooky.fi/ftm_spooky_tokens.json'
 export const EON_LIST = 'https://assets.spooky.fi/eon_spooky_tokens.json'
 export const BTTC_LIST = 'https://assets.spooky.fi/btt_spooky_tokens.json'
 export const GOAT_TESTNET_LIST = 'https://assets.goatswap.fi/goat_testnet_goat_tokens.json'
+export const GOAT_LIST = 'https://assets.spooky.fi/goat_tokens.json'
 
 // lower index == higher priority for token import
 export const DEFAULT_LIST_OF_LISTS: string[] = [
@@ -17,6 +18,7 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
   EON_LIST,
   FANTOM_LIST,
   GOAT_TESTNET_LIST,
+  GOAT_LIST,
   OPTIMISM_LIST,
   ARBITRUM_LIST,
   POLYGON_LIST,
@@ -26,6 +28,4 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
 ]
 
 // default lists to be 'active' aka searched across
-export const DEFAULT_ACTIVE_LIST_URLS: string[] = [
-  GOAT_TESTNET_LIST,
-]
+export const DEFAULT_ACTIVE_LIST_URLS: string[] = [GOAT_LIST]

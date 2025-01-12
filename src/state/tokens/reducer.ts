@@ -78,6 +78,7 @@ export const initialState: TokensState = {
     [SupportedNetwork.EON]: {},
     [SupportedNetwork.BTTC]: {},
     [SupportedNetwork.GOATTESTNET]: {},
+    [SupportedNetwork.GOAT]: {},
   },
 }
 

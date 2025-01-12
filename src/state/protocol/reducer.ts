@@ -53,6 +53,7 @@ export const initialState: ProtocolState = {
   [SupportedNetwork.EON]: DEFAULT_INITIAL_STATE,
   [SupportedNetwork.BTTC]: DEFAULT_INITIAL_STATE,
   [SupportedNetwork.GOATTESTNET]: DEFAULT_INITIAL_STATE,
+  [SupportedNetwork.GOAT]: DEFAULT_INITIAL_STATE,
 }
 
 export default createReducer(initialState, (builder) =>

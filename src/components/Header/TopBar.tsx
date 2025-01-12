@@ -46,6 +46,8 @@ const TopBar = () => {
               <Item>BTTC Price:</Item>
             ) : activeNetwork.id === SupportedNetwork.GOATTESTNET ? (
               <Item>BTC Price:</Item>
+            ) : activeNetwork.id === SupportedNetwork.GOAT ? (
+              <Item>BTC Price:</Item>
             ) : (
               <Item>Eth Price:</Item>
             )}
@@ -62,6 +64,8 @@ const TopBar = () => {
           ) : activeNetwork.id === SupportedNetwork.BTTC ? (
             <StyledLink href="https://info.btt.spooky.fi">V2 Analytics</StyledLink>
           ) : activeNetwork.id === SupportedNetwork.GOATTESTNET ? (
+            <></>
+          ) : activeNetwork.id === SupportedNetwork.GOAT ? (
             <></>
           ) : (
             <></>

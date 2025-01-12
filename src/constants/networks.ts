@@ -25,6 +25,7 @@ export enum SupportedNetwork {
   EON,
   BTTC,
   GOATTESTNET,
+  GOAT,
 }
 
 export type NetworkInfo = {
@@ -169,6 +170,17 @@ export const GoatTestnetNetworkInfo: NetworkInfo = {
   imageURL: GOAT_TESTNET_LOGO_URL,
 }
 
+export const GoatNetworkInfo: NetworkInfo = {
+  chainId: ChainId.GOAT,
+  id: SupportedNetwork.GOAT,
+  route: 'goat',
+  name: 'Goat',
+  bgColor: 'rgb(222, 175, 46)',
+  primaryColor: 'rgb(222, 175, 46)',
+  secondaryColor: '#FB7876',
+  imageURL: GOAT_TESTNET_LOGO_URL,
+}
+
 // const isBttcDisabled = process.env.REACT_APP_BTTC_DISABLED === 'true'
 
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
@@ -182,6 +194,6 @@ export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
   // AvalancheNetworkInfo,
   // FantomNetworkInfo,
   // EonNetworkInfo,
-  GoatTestnetNetworkInfo,
+  GoatNetworkInfo,
   // ...(isBttcDisabled ? [] : [BttcNetworkInfo]), // Include BTTC only if it's not disabled
 ]

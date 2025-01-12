@@ -24,6 +24,8 @@ import {
   bttcBlockClient,
   goatTestnetClient,
   goatTestnetBlockClient,
+  goatClient,
+  goatBlockClient,
 } from 'apollo/client'
 import { NetworkInfo, SupportedNetwork } from 'constants/networks'
 import { useCallback, useMemo } from 'react'
@@ -164,8 +166,8 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
     //   return eonClient
     // case SupportedNetwork.BTTC:
     //   return bttcClient
-    case SupportedNetwork.GOATTESTNET:
-      return goatTestnetClient
+    case SupportedNetwork.GOAT:
+      return goatClient
     default:
       return client
   }
@@ -197,8 +199,8 @@ export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
     //   return eonBlockClient
     // case SupportedNetwork.BTTC:
     //   return bttcBlockClient
-    case SupportedNetwork.GOATTESTNET:
-      return goatTestnetBlockClient
+    case SupportedNetwork.GOAT:
+      return goatBlockClient
     default:
       return blockClient
   }
