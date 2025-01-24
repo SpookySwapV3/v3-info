@@ -49,7 +49,7 @@ export const client = new ApolloClient({
 })
 
 export const fantomClient = new ApolloClient({
-  uri: 'https://api.goldsky.com/api/public/project_clss7z2o15cxh010fdvq909x6/subgraphs/fantom-v3/1.2.0/gn',
+  uri: `${process.env.REACT_APP_FANTOM_SUBGRAPH}`,
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -77,7 +77,7 @@ export const fantomClient = new ApolloClient({
 })
 
 export const fantomBlockClient = new ApolloClient({
-  uri: 'https://api.goldsky.com/api/public/project_clss7z2o15cxh010fdvq909x6/subgraphs/blocks/fantom/gn',
+  uri: `${process.env.REACT_APP_FANTOM_BLOCKS_SUBGRAPH}`,
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
