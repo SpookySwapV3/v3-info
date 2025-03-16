@@ -174,7 +174,7 @@ export const GoatNetworkInfo: NetworkInfo = {
   chainId: ChainId.GOAT,
   id: SupportedNetwork.GOAT,
   route: 'goat',
-  name: 'Goat',
+  name: 'GOAT',
   bgColor: 'rgb(222, 175, 46)',
   primaryColor: 'rgb(222, 175, 46)',
   secondaryColor: '#FB7876',
