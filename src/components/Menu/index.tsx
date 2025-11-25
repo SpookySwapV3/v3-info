@@ -5,6 +5,7 @@ import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 
 import { ExternalLink } from '../../theme'
+import { appMap } from 'theme/assets'
 
 const StyledMenuIcon = styled(MenuIcon)`
   path {
@@ -97,7 +98,7 @@ export default function Menu() {
 
       {isOpen && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://goatswap.fi/">
+          <MenuItem id="link" href={appMap}>
             <Info size={14} />
             About
           </MenuItem>

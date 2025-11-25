@@ -79,6 +79,7 @@ export const initialState: TokensState = {
     [SupportedNetwork.BTTC]: {},
     [SupportedNetwork.GOATTESTNET]: {},
     [SupportedNetwork.GOAT]: {},
+    [SupportedNetwork.MONAD]: {},
   },
 }
 

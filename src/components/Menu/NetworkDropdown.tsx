@@ -6,6 +6,7 @@ import {
   SUPPORTED_NETWORK_VERSIONS,
   GoatTestnetNetworkInfo,
   GoatNetworkInfo,
+  MonadNetworkInfo,
 } from 'constants/networks'
 import useTheme from 'hooks/useTheme'
 import React, { useState, useRef } from 'react'
@@ -105,7 +106,7 @@ export default function NetworkDropdown() {
           <TYPE.main fontSize="14px" color={theme?.white} ml="8px" mt="-2px" mr="2px" style={{ whiteSpace: 'nowrap' }}>
             {activeNetwork.name}
           </TYPE.main>
-          {[GoatNetworkInfo].includes(
+          {[MonadNetworkInfo].includes(
             activeNetwork,
           ) ? null : (
             <Badge $bgColor={activeNetwork.primaryColor} style={{ margin: '0 4px' }}>

@@ -15,7 +15,7 @@ import PoolPage from './Pool/PoolPage'
 import { ExternalLink, TYPE } from 'theme'
 import { useActiveNetworkVersion, useSubgraphStatus } from 'state/application/hooks'
 import { DarkGreyCard } from 'components/Card'
-import { SUPPORTED_NETWORK_VERSIONS, FantomNetworkInfo, GoatNetworkInfo } from 'constants/networks'
+import { SUPPORTED_NETWORK_VERSIONS, FantomNetworkInfo, GoatNetworkInfo, MonadNetworkInfo } from 'constants/networks'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -96,7 +96,7 @@ export default function App() {
   const [activeNetwork, setActiveNetwork] = useActiveNetworkVersion()
   useEffect(() => {
     if (location.pathname === '/') {
-      setActiveNetwork(GoatNetworkInfo)
+      setActiveNetwork(MonadNetworkInfo)
     } else {
       SUPPORTED_NETWORK_VERSIONS.map((n) => {
         if (location.pathname.includes(n.route.toLocaleLowerCase())) {

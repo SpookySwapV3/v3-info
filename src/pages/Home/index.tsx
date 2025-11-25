@@ -130,7 +130,7 @@ export default function Home() {
       <PageWrapper>
         <ThemedBackgroundGlobal $backgroundColor={activeNetwork.bgColor} />
         <AutoColumn $gap="16px">
-          <TYPE.main>GoatSwap Overview</TYPE.main>
+          <TYPE.main>Yowie Overview</TYPE.main>
           <ResponsiveRow>
             <ChartWrapper>
               <LineChart

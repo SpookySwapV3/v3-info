@@ -7,6 +7,7 @@ import { formatDollarAmount } from 'utils/numbers'
 import Polling from './Polling'
 import { useActiveNetworkVersion } from '../../state/application/hooks'
 import { SupportedNetwork } from '../../constants/networks'
+import { appMap, docsMap } from 'theme/assets'
 
 const Wrapper = styled.div`
   width: 100%;
@@ -48,6 +49,8 @@ const TopBar = () => {
               <Item>BTC Price:</Item>
             ) : activeNetwork.id === SupportedNetwork.GOAT ? (
               <Item>BTC Price:</Item>
+            ) : activeNetwork.id === SupportedNetwork.MONAD ? (
+              <Item>MON Price:</Item>
             ) : (
               <Item>Eth Price:</Item>
             )}
@@ -67,11 +70,13 @@ const TopBar = () => {
             <></>
           ) : activeNetwork.id === SupportedNetwork.GOAT ? (
             <></>
+          ) : activeNetwork.id === SupportedNetwork.MONAD ? (
+            <StyledLink href="https://info.yowie.fi">V2 Analytics</StyledLink>
           ) : (
             <></>
           )}
-          <StyledLink href="https://docs.goatsw.app/">Docs</StyledLink>
-          <StyledLink href="https://goatswap.fi/">App</StyledLink>
+          <StyledLink href={docsMap}>Docs</StyledLink>
+          <StyledLink href={appMap}>App</StyledLink>
         </AutoRow>
       </RowBetween>
     </Wrapper>

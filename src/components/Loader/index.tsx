@@ -1,6 +1,7 @@
 import React from 'react'
 import v3 from '../../assets/gif/happy_goat_new.gif'
 import styled, { keyframes, css } from 'styled-components'
+import { processingSpinner } from 'theme/assets'
 
 const rotate = keyframes`
   from {
@@ -81,7 +82,7 @@ export const LocalLoader = ({ fill }: { fill: boolean }) => {
     <Wrapper fill={fill ? 1 : 0}>
       <AnimatedImg>
         <img 
-          src={v3} 
+          src={processingSpinner} 
           alt="loading-icon" 
           style={{ 
             width: "50%", 

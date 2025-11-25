@@ -13,6 +13,7 @@ export const ZEN_ADDRESS = ''
 export const BTTC_ADDRESS = ''
 export const GOAT_TESTNET_ADDRESS = ''
 export const GOAT_ADDRESS = ''
+export const MONAD_ADDRESS = ''
 
 const WETH_ADDRESS = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
 const ARBITRUM_WETH_ADDRESS = '0x82af49447d8a07e3bd95bd0d56f35241523fbab1'
@@ -38,6 +39,7 @@ export const TOKEN_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.BTTC]: [],
   [SupportedNetwork.GOATTESTNET]: [],
   [SupportedNetwork.GOAT]: [],
+  [SupportedNetwork.MONAD]: [],
 }
 
 export const POOL_HIDE: { [key: string]: string[] } = {
@@ -62,6 +64,7 @@ export const POOL_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.BTTC]: [],
   [SupportedNetwork.GOATTESTNET]: [],
   [SupportedNetwork.GOAT]: [],
+  [SupportedNetwork.MONAD]: [],
 }
 
 export const START_BLOCKS: { [key: string]: number } = {
@@ -78,6 +81,7 @@ export const START_BLOCKS: { [key: string]: number } = {
   [SupportedNetwork.BTTC]: 26441276,
   [SupportedNetwork.GOATTESTNET]: 410291,
   [SupportedNetwork.GOAT]: 108410,
+  [SupportedNetwork.MONAD]: 108410,
 }
 
 export interface WalletInfo {
