@@ -188,8 +188,8 @@ export const MonadNetworkInfo: NetworkInfo = {
   id: SupportedNetwork.MONAD,
   route: 'monad',
   name: 'MONAD',
-  bgColor: 'rgb(4, 2, 78)',
-  primaryColor: 'rgb(4, 2, 78)',
+  bgColor: '#836EF9',
+  primaryColor: '#836EF9',
   secondaryColor: 'white',
   imageURL: MONAD_LOGO_URL,
 }
