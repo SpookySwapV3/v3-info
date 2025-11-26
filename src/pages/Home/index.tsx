@@ -54,10 +54,21 @@ export default function Home() {
   // Hot fix to remove errors in TVL data while subgraph syncs.
   const [chartData] = useProtocolChartData()
 
+  const weeklyVolumeData = useTransformedVolumeData(chartData, 'week')
+  const monthlyVolumeData = useTransformedVolumeData(chartData, 'month')
+  
   useEffect(() => {
-    setLiquidityHover(undefined)
-    setVolumeHover(undefined)
-  }, [activeNetwork])
+    if (chartData && chartData.length > 0) {
+      setLiquidityHover(chartData[chartData.length - 1].tvlUSD);
+    } else {
+      setLiquidityHover(undefined)
+    }
+    if (chartData && chartData.length > 0) {
+      setVolumeHover(weeklyVolumeData[weeklyVolumeData.length - 1].value);
+    } else {
+      setVolumeHover(undefined)
+    }
+  }, [activeNetwork, chartData])
 
   // get all the pool datas that exist
   const allPoolData = useAllPoolData()
@@ -105,9 +116,6 @@ export default function Home() {
     }
   }, [chartData])
 
-  const weeklyVolumeData = useTransformedVolumeData(chartData, 'week')
-  const monthlyVolumeData = useTransformedVolumeData(chartData, 'month')
-
   const allTokens = useAllTokenData()
 
   const formattedTokens = useMemo(() => {
@@ -125,6 +133,9 @@ export default function Home() {
     return formatDollarAmount(protocolData?.tvlUSD, 2, true)
   }, [liquidityHover, protocolData?.tvlUSD])
 
+  console.log("protocolData", protocolData)
+
+  console.log("formattedTvlData", chartData)
   return (
     <Trace page={'home-page'} shouldLogImpression>
       <PageWrapper>

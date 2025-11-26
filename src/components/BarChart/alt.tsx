@@ -109,8 +109,8 @@ const Chart = ({
               bottom: 5,
             }}
             onMouseLeave={() => {
-              setLabel && setLabel(undefined)
-              setValue && setValue(undefined)
+              // setLabel && setLabel(undefined)
+              // setValue && setValue(undefined)
             }}
           >
             <XAxis
