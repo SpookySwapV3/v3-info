@@ -56,7 +56,7 @@ export default function Home() {
 
   const weeklyVolumeData = useTransformedVolumeData(chartData, 'week')
   const monthlyVolumeData = useTransformedVolumeData(chartData, 'month')
-  
+
   useEffect(() => {
     if (chartData && chartData.length > 0) {
       setLiquidityHover(chartData[chartData.length - 1].tvlUSD);
@@ -133,9 +133,6 @@ export default function Home() {
     return formatDollarAmount(protocolData?.tvlUSD, 2, true)
   }, [liquidityHover, protocolData?.tvlUSD])
 
-  console.log("protocolData", protocolData)
-
-  console.log("formattedTvlData", chartData)
   return (
     <Trace page={'home-page'} shouldLogImpression>
       <PageWrapper>
